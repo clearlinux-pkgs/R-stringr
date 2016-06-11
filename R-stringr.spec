@@ -4,13 +4,19 @@
 #
 Name     : R-stringr
 Version  : 1.0.0
-Release  : 24
+Release  : 25
 URL      : http://cran.r-project.org/src/contrib/stringr_1.0.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/stringr_1.0.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations
 Group    : Development/Tools
 License  : GPL-2.0
+Requires: R-magrittr
 Requires: R-stringi
+Requires: R-R6
+Requires: R-digest
+BuildRequires : R-R6
+BuildRequires : R-digest
+BuildRequires : R-magrittr
 BuildRequires : R-stringi
 BuildRequires : clr-R-helpers
 

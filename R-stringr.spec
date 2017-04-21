@@ -4,7 +4,7 @@
 #
 Name     : R-stringr
 Version  : 1.2.0
-Release  : 32
+Release  : 33
 URL      : http://cran.r-project.org/src/contrib/stringr_1.2.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/stringr_1.2.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations
@@ -20,12 +20,15 @@ stringr <img src="logo.png" align="right" />
 %setup -q -c -n stringr
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1487769650
+export SOURCE_DATE_EPOCH=1492799737
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1487769650
+export SOURCE_DATE_EPOCH=1492799737
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -41,7 +44,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library stringr
 
@@ -53,6 +56,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/stringr/LICENSE
 /usr/lib64/R/library/stringr/Meta/Rd.rds
 /usr/lib64/R/library/stringr/Meta/data.rds
+/usr/lib64/R/library/stringr/Meta/features.rds
 /usr/lib64/R/library/stringr/Meta/hsearch.rds
 /usr/lib64/R/library/stringr/Meta/links.rds
 /usr/lib64/R/library/stringr/Meta/nsInfo.rds

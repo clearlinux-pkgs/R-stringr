@@ -1,5 +1,5 @@
 PKG_NAME := R-stringr
-URL := http://cran.r-project.org/src/contrib/stringr_1.2.0.tar.gz
-
+URL = https://cran.r-project.org/src/contrib/stringr_1.3.0.tar.gz
+ARCHIVES = 
 
 include ../common/Makefile.common

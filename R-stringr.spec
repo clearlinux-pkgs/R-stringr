@@ -4,18 +4,12 @@
 #
 Name     : R-stringr
 Version  : 1.3.0
-Release  : 45
+Release  : 46
 URL      : https://cran.r-project.org/src/contrib/stringr_1.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stringr_1.3.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-evaluate
-Requires: R-glue
-Requires: R-markdown
-BuildRequires : R-evaluate
-BuildRequires : R-glue
-BuildRequires : R-markdown
 BuildRequires : clr-R-helpers
 
 %description
@@ -32,11 +26,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522159327
+export SOURCE_DATE_EPOCH=1522161642
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1522159327
+export SOURCE_DATE_EPOCH=1522161642
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

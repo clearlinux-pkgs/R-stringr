@@ -4,14 +4,18 @@
 #
 Name     : R-stringr
 Version  : 1.4.0
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-rlang
+Requires: R-evaluate
+Requires: R-stringi
+BuildRequires : R-evaluate
+BuildRequires : R-glue
 BuildRequires : R-rlang
+BuildRequires : R-stringi
 BuildRequires : buildreq-R
 
 %description
@@ -25,10 +29,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549813466
+export SOURCE_DATE_EPOCH=1552847654
 
 %install
-export SOURCE_DATE_EPOCH=1549813466
+export SOURCE_DATE_EPOCH=1552847654
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,8 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library stringr|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  stringr || :
 
 
 %files
@@ -107,3 +110,30 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/stringr/htmlwidgets/lib/str_view.css
 /usr/lib64/R/library/stringr/htmlwidgets/str_view.js
 /usr/lib64/R/library/stringr/htmlwidgets/str_view.yaml
+/usr/lib64/R/library/stringr/tests/testthat.R
+/usr/lib64/R/library/stringr/tests/testthat/test-case.R
+/usr/lib64/R/library/stringr/tests/testthat/test-conv.R
+/usr/lib64/R/library/stringr/tests/testthat/test-count.r
+/usr/lib64/R/library/stringr/tests/testthat/test-detect.r
+/usr/lib64/R/library/stringr/tests/testthat/test-dup.r
+/usr/lib64/R/library/stringr/tests/testthat/test-extract.r
+/usr/lib64/R/library/stringr/tests/testthat/test-flatten.R
+/usr/lib64/R/library/stringr/tests/testthat/test-glue.R
+/usr/lib64/R/library/stringr/tests/testthat/test-interp.r
+/usr/lib64/R/library/stringr/tests/testthat/test-join.r
+/usr/lib64/R/library/stringr/tests/testthat/test-length.r
+/usr/lib64/R/library/stringr/tests/testthat/test-locate.r
+/usr/lib64/R/library/stringr/tests/testthat/test-match.r
+/usr/lib64/R/library/stringr/tests/testthat/test-modifiers.r
+/usr/lib64/R/library/stringr/tests/testthat/test-pad.r
+/usr/lib64/R/library/stringr/tests/testthat/test-remove.r
+/usr/lib64/R/library/stringr/tests/testthat/test-replace.r
+/usr/lib64/R/library/stringr/tests/testthat/test-sort.R
+/usr/lib64/R/library/stringr/tests/testthat/test-split.r
+/usr/lib64/R/library/stringr/tests/testthat/test-sub.r
+/usr/lib64/R/library/stringr/tests/testthat/test-subset.r
+/usr/lib64/R/library/stringr/tests/testthat/test-trim.r
+/usr/lib64/R/library/stringr/tests/testthat/test-trunc.r
+/usr/lib64/R/library/stringr/tests/testthat/test-view.R
+/usr/lib64/R/library/stringr/tests/testthat/test-word.r
+/usr/lib64/R/library/stringr/tests/testthat/test-wrap.r

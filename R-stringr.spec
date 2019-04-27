@@ -4,7 +4,7 @@
 #
 Name     : R-stringr
 Version  : 1.4.0
-Release  : 66
+Release  : 67
 URL      : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations

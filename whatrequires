@@ -1,2 +1,18 @@
 # This file contains recursive sources that require this package
+R-BayesFactor
+R-NMF
+R-RNeXML
+R-bibtex
+R-bold
+R-bridgesampling
+R-htmlTable
+R-knitr
+R-pkgmaker
+R-pmml
+R-reshape2
+R-rmarkdown
+R-rngtools
+R-snakecase
+R-taxize
+R-tidyverse
 apache-spark

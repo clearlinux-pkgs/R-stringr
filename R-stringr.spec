@@ -4,20 +4,26 @@
 #
 Name     : R-stringr
 Version  : 1.4.0
-Release  : 70
+Release  : 71
 URL      : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/stringr_1.4.0.tar.gz
 Summary  : Simple, Consistent Wrappers for Common String Operations
 Group    : Development/Tools
 License  : GPL-2.0
-BuildRequires : R-evaluate
+Requires: R-glue
+Requires: R-magrittr
+Requires: R-stringi
 BuildRequires : R-glue
-BuildRequires : R-rlang
+BuildRequires : R-magrittr
 BuildRequires : R-stringi
 BuildRequires : buildreq-R
 
 %description
-# stringr <a href='https:/stringr.tidyverse.org'><img src='man/figures/logo.png' align="right" height="139" /></a>
+A consistent, simple and easy to use set of wrappers around the fantastic
+'stringi' package. All function and argument names (and positions) are
+consistent, all functions deal with "NA"'s and zero length vectors in the same
+way, and the output from one function is easy to feed into the input of
+another.
 
 %prep
 %setup -q -c -n stringr
@@ -26,13 +32,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552933590
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1565500695
 
 %install
-export SOURCE_DATE_EPOCH=1552933590
+export SOURCE_DATE_EPOCH=1565500695
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -61,12 +67,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  stringr || :
+R CMD check --no-manual --no-examples --no-codoc stringr || :
 
 
 %files

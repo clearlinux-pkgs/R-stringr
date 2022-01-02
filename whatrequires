@@ -1,15 +1,20 @@
 # This file contains recursive sources that require this package
 R-BayesFactor
+R-DiagrammeR
 R-NMF
 R-RNeXML
+R-WikidataR
 R-bibtex
 R-bold
 R-bridgesampling
 R-broom
 R-fitbitScraper
+R-ggfortify
 R-htmlTable
 R-janitor
+R-kableExtra
 R-knitr
+R-labelled
 R-pkgmaker
 R-pmml
 R-pryr
@@ -18,4 +23,6 @@ R-rmarkdown
 R-roxygen2
 R-selectr
 R-snakecase
+R-tidyrules
 R-tidyverse
+R-vembedr

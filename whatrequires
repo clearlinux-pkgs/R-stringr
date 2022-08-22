@@ -8,6 +8,7 @@ R-bibtex
 R-bold
 R-bridgesampling
 R-broom
+R-broom.mixed
 R-fitbitScraper
 R-ggfortify
 R-htmlTable
@@ -17,6 +18,7 @@ R-knitr
 R-labelled
 R-pkgmaker
 R-pmml
+R-profvis
 R-pryr
 R-reshape2
 R-rmarkdown

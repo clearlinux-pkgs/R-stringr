@@ -4,7 +4,6 @@ R-DiagrammeR
 R-NMF
 R-RNeXML
 R-WikidataR
-R-bold
 R-bridgesampling
 R-broom
 R-broom.mixed
@@ -13,7 +12,6 @@ R-ggfortify
 R-htmlTable
 R-janitor
 R-kableExtra
-R-knitr
 R-labelled
 R-pkgmaker
 R-pmml
@@ -24,6 +22,8 @@ R-rmarkdown
 R-roxygen2
 R-selectr
 R-snakecase
+R-tidyr
 R-tidyrules
 R-tidyverse
+R-vcdExtra
 R-vembedr
